@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if filename %}
+    <div>
+        <video autoplay="autoplay" controls="controls" preload="preload" width="640">
+            <source src="{{ url_for('display_image', filename=filename) }}" type="video/mp4"></source>
+        </video>
+        <video autoplay="autoplay" controls="controls" preload="preload" width="640">
+            <source src="{{ url_for('display_result_image', filename=filename) }}" type="video/mp4"></source>
+        </video>
+    </div>
+    {% endif %}
+</body>
+</html>
